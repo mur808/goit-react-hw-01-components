@@ -13,7 +13,9 @@ const StaticsItem = ({ stats }) => {
 export default StaticsItem;
 
 StaticsItem.propTypes = {
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
-};
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
+  }))
+}
